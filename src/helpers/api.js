@@ -1,7 +1,7 @@
 // const BASE_URL = 'http://10.0.0.180:8000'
 // const BASE_URL = 'https://jedelacarrera-hqdgpb4czhszfijd.socketxp.com'
 // const BASE_URL = 'https://jedelacarrera-78pz5xy5a926yfa0.socketxp.com'
-const BASE_URL = 'https://carecacaapi.herokuapp.com/'
+const BASE_URL = 'https://carecacaapi.herokuapp.com'
 export async function getTable(tableName) {
   const url = `${BASE_URL}/game/${tableName}`
   return await fetch(url).then(response => response.json())
