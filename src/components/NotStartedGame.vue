@@ -11,7 +11,9 @@
       />
     </div>
     <div class="not-started-table-center">
-      <v-btn @click="$emit('start-game')" class="ma-4">Repartir cartas</v-btn>
+      <v-btn @click="$emit('start-game')" class="primary ma-4"
+        >Repartir cartas</v-btn
+      >
       <div class="ml-2 col">
         <p>fddsfs{{ lastAction }}</p>
         <p>gdsfg {{ lastLastAction }}</p>
