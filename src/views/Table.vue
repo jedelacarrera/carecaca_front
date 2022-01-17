@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
+  <div class="table">
     <Game
+      v-if="started"
       :key="key"
       :username="username"
       :tableName="tableName"
@@ -19,6 +20,14 @@
         genPlayCardsOrTakePlayedCards($event.cards, $event.origin)
       "
       @table-status="genTableStatus()"
+    />
+    <NotStartedGame
+      v-else
+      :key="key"
+      :players="players"
+      :tableName="tableName"
+      :lastAction="lastAction"
+      :lastLastAction="lastLastAction"
       @start-game="genStartGame()"
     />
     <v-dialog v-model="showDialog" max-width="300px">
@@ -38,6 +47,7 @@
 
 <script>
 import Game from '@/components/Game'
+import NotStartedGame from '@/components/NotStartedGame'
 import {
   getTable,
   login,
@@ -84,6 +94,7 @@ export default {
   },
   components: {
     Game,
+    NotStartedGame,
   },
   methods: {
     goBack() {
@@ -124,7 +135,6 @@ export default {
         this.showDialog = true
         return
       }
-      console.log(response.game)
 
       if (this.key === JSON.stringify(response.game)) {
         return

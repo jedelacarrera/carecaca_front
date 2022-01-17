@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    <LoginToTable message="Juego cara de caca!" />
+    <!-- <div class="row">
+      <router-link to="/instructions">Instrucciones</router-link>
+    </div>
+    -->
+    <LoginToTable :queryTable="queryTable" />
   </div>
 </template>
 
@@ -13,5 +17,15 @@ export default {
   components: {
     LoginToTable,
   },
+  computed: {
+    queryTable() {
+      return this.$route.query.table || ''
+    },
+  },
 }
 </script>
+<style>
+.home {
+  background-color: #f6f6f6;
+}
+</style>

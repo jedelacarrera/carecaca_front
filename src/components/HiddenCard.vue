@@ -1,5 +1,5 @@
 <template>
-  <div :class="containerClass"></div>
+  <div :class="containerClass" />
 </template>
 <script>
 export default {
