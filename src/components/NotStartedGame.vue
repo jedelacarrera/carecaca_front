@@ -15,8 +15,8 @@
         >Repartir cartas</v-btn
       >
       <div class="ml-2 col">
-        <p>fddsfs{{ lastAction }}</p>
-        <p>gdsfg {{ lastLastAction }}</p>
+        <p>{{ lastAction }}</p>
+        <p>{{ lastLastAction }}</p>
         <p class="ml-2 font-weight-bold">
           Link para invitar gente:
           <a :href="tableUrl" target="blank">{{ tableUrl }}</a>
