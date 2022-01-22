@@ -7,7 +7,7 @@ import VuePusher from '@/plugins/pusher'
 Vue.config.productionTip = false
 
 Vue.use(VuePusher, {
-  api_key: 'a9bbaeaa4779d99286ba',
+  api_key: '9ba9d78bd91108bb3657',
   options: {
     cluster: 'sa1',
     encrypted: true,
